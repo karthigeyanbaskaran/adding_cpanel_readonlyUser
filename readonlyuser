@@ -1,0 +1,14 @@
+first login the cpanel server
+make -- adduser <username>
+chmod -R o+r /home/*
+usermod -d /home/karthik(cpanelusername)/ arun(desiredusername)
+see the website to change the config file for the further permission: https://phoenixnap.com/kb/ssh-permission-denied-publickey
+there is plenty of solution 
+example cmd below:
+
+passwd: all authentication tokens updated successfully.
+[root@3-109-11-52 centos]# chmod -R o+r /home/* 
+[root@3-109-11-52 centos]# usermod -d /home/karthik/ arun
+[root@3-109-11-52 centos]# nano /etc/ssh/sshd_config
+[root@3-109-11-52 centos]# systemctl restart sshd
+
